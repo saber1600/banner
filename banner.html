@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>公开课</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body id="open-163-com">
+<div id="container">
+    <div id="slides">
+        <div class="slides_container">
+            <div class="slide">
+                <a href="#" title="奇妙的昆虫世界" target="_blank"><img src="images/20120718115508d742a.jpg" width="800" height="350" alt="Slide 1"></a>
+                <div class="caption" id="caption">
+                    <img src="images/2012071812000444d7e.jpg" alt="" />
+                    <a class="cap-btn" id="" href="#"></a>
+                </div>
+            </div>
+            <div class="slide">
+                <a href="#" title="贞观之治的三个历史功绩" target="_blank"><img src="images/20120717155750f3ad7.jpg" width="800" height="350" alt="Slide 1"></a>
+                <div class="caption" id="caption">
+                    <img src="images/2012071716540557f23.jpg" alt="" />
+                    <a class="cap-btn" id="" href="#"></a>
+                </div>
+            </div>
+            <div class="slide">
+                <a href="#" title="中国交互设计体验日演讲实录（2010" target="_blank"><img src="images/20120716105141bf662.jpg" width="800" height="350" alt="Slide 1"></a>
+                <div class="caption" id="caption">
+                    <img src="images/20120716105634fa4ae.jpg" alt="" />
+                    <a class="cap-btn" id="" href="#"></a>
+                </div>
+            </div>
+            <div class="slide">
+                <a href="#" title="中国防震减灾工作的经验和教训 " target="_blank"><img src="images/201206151402201ae6f.jpg" width="800" height="350" alt="Slide 1"></a>
+                <div class="caption" id="caption">
+                    <img src="images/2012061514042823237.jpg" alt="" />
+                    <a class="cap-btn" id="" href="#"></a>
+                </div>
+            </div>
+       </div>    
+       <a href="#" class="ocprev"></a>
+       <a href="#" class="ocnext"></a>
+        
+       <div class="m-slul f-pr"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script src="slides.js"></script>
+<script>
+$(function(){
+	$('#slides').slides({
+		preload: true,//加载图片设置缓冲图片
+		preloadImage: 'images/ajax-loader.gif',//缓冲的图片路径
+		container:'slides_container',//整个展示框的div
+		play: 5000,//自动切换时，间隔时间
+		pause: 2800,//图片上移开鼠标，开始继续执行函数的时间
+		slideSpeed: 915,
+		hoverPause: true,
+		resizeWd: true,
+		next:'ocnext',//下一帧类名
+		prev:'ocprev',//上一峥类名
+		animationStart: function(current){
+			jQuery('.caption').hide();                
+		},
+		animationComplete: function(current){
+			jQuery('.caption').fadeIn(800);
+		},
+		slidesLoaded: function() {
+			jQuery('.caption').fadeIn(800);
+		}
+	});
+});
+</script>
+</body>
+</html>

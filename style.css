@@ -1,0 +1,153 @@
+/* 筚路蓝缕 以启山林 */
+/* 重置&默认(reset&base)(tags) */
+*[hidefocus]{outline:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{padding:0;margin:0;}
+a,p{line-height:18px;font-size:12px;}
+fieldset,img,html,body,iframe{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+li{list-style:none;}
+h1,h2,h3,h4{font-family:微软雅黑;font-weight:bold;font-size:100%;}
+h5,h6{font-family:宋体;font-weight:bold;font-size:100%;}
+caption,th{font-weight:normal;font-style:normal;text-align:left;}
+em,strong{font-weight:bold;font-style:normal;}
+body,textarea,select,input{font-family:arial,simsun,helvetica,sans-serif;font-size:12px;color:#333;}
+body{background-color:#fff;}
+a,button{cursor:pointer;}
+a{text-decoration:none;color:#000;}
+a:hover{text-decoration:underline;color:#16914E}
+/* 统一调用背景图 */
+.cap-btn,a.ocprev,a.ocnext,a.ogprev,a.ognext{
+background:url(images/sprite.png) no-repeat 9999px 9999px;
+}
+
+#container{
+background:#000;
+}
+/* 统一清除浮动 */
+/* 布局(grids)(.g-) */
+/* 页面 */
+html,body,.g-navcnt{width:100%;height:100%;}
+html{overflow:auto;overflow-y:scroll;}
+body{text-align:center;}
+/* 幻灯片 */
+#container {
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+	padding-top:20px;margin-bottom:10px;width:100%;height:388px;overflow: hidden;
+}
+/*
+	Slideshow
+*/
+#slides,#slides-2{
+	position:relative;
+	z-index:100;
+}
+#slides-2{
+	display: none;
+}
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+	js中会设置这个元素的css样式
+*/
+.slides_container {
+	//width:1680px;
+	height:350px;
+	//overflow:hidden;
+	//position:relative;
+	display:none;
+}
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+.slides_container div.slide {
+	//width:1440px;
+	height:350px;
+	display:block;
+}
+div.slide a{
+	display: block;
+	text-align:center;
+	margin:auto;
+	width:800px;
+}
+/*
+	Next/prev buttons
+*/
+ a.ocnext,a.ocprev,a.ognext,a.ogprev {
+	display: block;
+	position:absolute;
+	top:143px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+a.ocprev,a.ogprev{
+	left:30px;
+	background-position:-185px -355px;width:30px;height:50px;
+}
+a.ocnext,a.ognext {
+	right:30px;
+	background-position:-240px -358px;width:30px;height:50px;
+}
+a.ocprev:hover,a.ogprev:hover{background-position:-185px -420px;}
+a.ocnext:hover,a.ognext:hover{background-position:-240px -420px;}
+/*
+	Pagination
+*/
+.pagination {
+	margin:0px auto 0px auto;
+	padding-top:12px;
+	width:310px;
+	height:16px;
+}
+.pagination li {
+	float:left;
+	margin:0px 1px;
+	list-style:none;
+}
+.pagination li a {float:left;overflow:hidden;display:inline-block;zoom:1;*display:inline; width:20px; height:8px; margin:4px 3px;border:1px solid #999;background:none;text-indent: -9999px;overflow: hidden;}
+.pagination li a:hover{
+	border:1px solid #fff;
+}
+.pagination li.current a {
+	border:1px solid #19B961;background: #197442;
+}
+/*
+	Caption
+*/
+.caption,.caption2 {
+	display: none;
+	z-index:500;
+	position:absolute;
+	top:15px;
+	left:0;
+	width:210px;
+	height:320px;
+	text-shadow:none;
+}
+div.slide a.cap-btn{
+	display: block;
+	width:160px;
+	height:55px;
+	position:absolute;
+	background-position:0px -350px;
+	bottom:20px;
+	left:25px;
+}
+div.slide a.cap-btn:hover{
+	background-position:0px -413px;
+}
+.m-slul{display:inline-block; margin:0px auto 0 auto; width:960px; height:38px;}
+.w-slchg{display:none; position:absolute;left:0;float:left; height:36px; line-height:36px;color:#8F8E8E;}
+.w-slchg a{color: #CCC;}
+.w-slchg span{display:inline-block; width:10px; height:10px; margin:14px 0 0 85px;background-position:-305px -193px;}
